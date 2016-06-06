@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bigi.slonovoz.menu.FragmentMany"
+    android:background="#c2dde2">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButtonbuttonotziv"
+        android:layout_gravity="center_horizontal|top"
+        android:src="@drawable/img10"
+        android:nestedScrollingEnabled="false"
+        android:longClickable="false"
+        android:adjustViewBounds="true"
+        android:scaleType="fitStart"
+        android:background="#ffffff"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Ostzaizv"
+        android:id="@+id/buttonotziv"
+        android:layout_gravity="center"
+        android:layout_below="@+id/imageButtonbuttonotziv"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="#778e97"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/abc_text_size_title_material_toolbar"
+        android:textStyle="bold" />
+</RelativeLayout>

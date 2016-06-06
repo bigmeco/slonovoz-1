@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="bigi.slonovoz.Oformzakaz"
+    tools:showIn="@layout/activity_oformzakaz"
+    android:orientation="vertical"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#d9ecf0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/zappunkt"
+            android:id="@+id/textView9"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/abc_primary_text_material_light"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/abc_dialog_padding_material"
+            android:padding="6dp" />
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:cardElevation="6dp"
+            android:layout_below="@+id/textView9"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/view"
+            android:layout_toLeftOf="@+id/space4"
+            android:layout_toStartOf="@+id/space4">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/kakmah"
+                android:id="@+id/textView10"
+                android:layout_below="@+id/textView9"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:gravity="center_horizontal"
+                android:layout_toLeftOf="@+id/space4"
+                android:layout_toStartOf="@+id/space4" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/radiob" >
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3 метра"
+                android:id="@+id/radioButton"
+                android:layout_below="@+id/textView10"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:checked="false"
+                android:layout_toLeftOf="@+id/space4"
+                android:layout_toStartOf="@+id/space4"
+                android:foregroundGravity="center_horizontal"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4 метра"
+                android:id="@+id/radioButton2"
+                android:layout_below="@+id/radioButton"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:checked="false"
+                android:layout_toLeftOf="@+id/space4"
+                android:layout_toStartOf="@+id/space4"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp" />
+
+           </RadioGroup>
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:cardElevation="6dp"
+            android:id="@+id/view2"
+            android:layout_below="@+id/space5"
+            android:layout_toLeftOf="@+id/space4"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kolgr"
+                    android:id="@+id/textView11"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editText3"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/_0"
+                    android:gravity="center_horizontal" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:cardElevation="6dp"
+            android:layout_below="@+id/space6"
+            android:layout_alignLeft="@+id/space6"
+            android:layout_alignStart="@+id/space6"
+            android:layout_alignRight="@+id/space6"
+            android:layout_alignEnd="@+id/space6"
+            android:id="@+id/view4">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dopop"
+                    android:id="@+id/textView12"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kortkor"
+                    android:id="@+id/textView24" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editText12"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/_0"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/politel"
+                    android:id="@+id/textView25" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editText13"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/_0"
+                    android:gravity="center_horizontal" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bezlift"
+                    android:id="@+id/checkBox2"
+                    android:layout_gravity="center_horizontal"
+                    android:checked="false" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/razbmeb"
+                    android:id="@+id/checkBox3"
+                    android:layout_gravity="center_horizontal"
+                    android:checked="false" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        card_view:cardElevation="6dp"
+            android:id="@+id/view3"
+            android:layout_below="@+id/space8"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/space4"
+            android:layout_toStartOf="@+id/space4">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kmotdo"
+                android:id="@+id/textView13"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText11"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/_0"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardElevation="6dp"
+            android:layout_below="@+id/space7"
+            android:layout_alignRight="@+id/space7"
+            android:layout_alignEnd="@+id/space7"
+            android:id="@+id/view5"
+            android:layout_alignLeft="@+id/space7"
+            android:layout_alignStart="@+id/space7">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/telf"
+                    android:id="@+id/textView14"
+                    android:layout_gravity="center_horizontal" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editText4"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardElevation="6dp"
+            android:id="@+id/view6"
+            android:layout_below="@+id/textView9"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/space4"
+            android:layout_toEndOf="@+id/space4">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/adres"
+                    android:id="@+id/textView15"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gorod"
+                    android:id="@+id/textView16"
+                    android:paddingLeft="3dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:ems="10"
+                    android:id="@+id/editText5"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ylits"
+                    android:id="@+id/textView17"
+                    android:paddingLeft="3dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:ems="10"
+                    android:id="@+id/editText6"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dom"
+                    android:id="@+id/textView18"
+                    android:paddingLeft="3dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/editText7"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kvar"
+                    android:id="@+id/textView19"
+                    android:paddingLeft="3dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/editText8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/etaj"
+                    android:id="@+id/textView20" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editText9"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardElevation="6dp"
+            android:id="@+id/view7"
+            android:layout_below="@+id/space9"
+            android:layout_alignRight="@+id/view15"
+            android:layout_alignEnd="@+id/view15">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/komentz"
+                    android:id="@+id/textView21"
+                    android:layout_gravity="center_horizontal" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText10"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardElevation="6dp"
+            android:id="@+id/view15"
+            android:layout_below="@+id/space12"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignLeft="@+id/space12"
+            android:layout_alignStart="@+id/space12">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zena"
+                    android:id="@+id/textView22"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/textView23"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:text="@string/_0"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textIsSelectable="false"
+                    android:textSize="25dp" />
+
+                <ImageButton
+                    android:layout_width="234dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/imageButton"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@android:drawable/button_onoff_indicator_on"
+                    android:background="#ffffff"
+                    android:padding="6dp"
+                    android:scaleType="fitCenter" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardElevation="6dp"
+            android:id="@+id/view8"
+            android:layout_below="@+id/space10"
+            android:layout_alignLeft="@+id/space10"
+            android:layout_alignStart="@+id/space10">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/koljas"
+                    android:id="@+id/textView26"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editText14"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/_0"
+                    android:gravity="center_horizontal" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <Space
+            android:layout_width="6dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView9"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/space4"
+            android:layout_alignBottom="@+id/view5" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_below="@+id/view"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/space5"
+            android:layout_toLeftOf="@+id/space4"
+            android:layout_toStartOf="@+id/space4" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:id="@+id/space6"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/view3"
+            android:layout_toLeftOf="@+id/space4"
+            android:layout_toStartOf="@+id/space4" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:id="@+id/space7"
+            android:layout_below="@+id/view6"
+            android:layout_toRightOf="@+id/space4"
+            android:layout_toEndOf="@+id/space4" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:id="@+id/space8"
+            android:layout_alignLeft="@+id/view2"
+            android:layout_alignStart="@+id/view2"
+            android:layout_below="@+id/view2"
+            android:layout_toLeftOf="@+id/space4"
+            android:layout_toStartOf="@+id/space4" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:id="@+id/space9"
+            android:layout_below="@+id/view15"
+            android:layout_alignLeft="@+id/view15"
+            android:layout_alignStart="@+id/view15" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:id="@+id/space11"
+            android:layout_below="@+id/textView27"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/otprav"
+            android:id="@+id/button"
+            android:layout_below="@+id/space11"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#7cffd3" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:id="@+id/space12"
+            android:layout_alignLeft="@+id/view8"
+            android:layout_alignStart="@+id/view8"
+            android:layout_below="@+id/view8"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:id="@+id/space10"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/space4"
+            android:layout_toRightOf="@+id/space4"
+            android:layout_toEndOf="@+id/space4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/spravprim"
+            android:id="@+id/textView27"
+            android:layout_below="@+id/view7"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/abc_primary_text_material_light"
+            android:textStyle="bold"
+            android:padding="3dp"
+            android:layout_alignRight="@+id/space9"
+            android:layout_alignEnd="@+id/space9" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zvonsprav"
+            android:id="@+id/textView28"
+            android:textColor="@color/abc_primary_text_material_light"
+            android:textStyle="bold"
+            android:padding="3dp"
+            android:layout_below="@+id/button"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/textView28"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+</ScrollView>

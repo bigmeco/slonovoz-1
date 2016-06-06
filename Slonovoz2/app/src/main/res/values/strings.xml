@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">«Слоновоз»</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="nagal">"Компания имеет достаточно большой опыт перевозки мебели в Санкт-Петербурге и гарантирует быструю подачу транспорта"
+       " и по запросу предоставляет услуги грузчиков, которые помогут разобрать и собрать мебель, и осторожно осуществят погрузку, освободив вас от лишних хлопот.\n"
+        "Предоставляем услуги также в Колпино, Металлострое, Понтонном, Федоровское, Пушкин, Тосно, Гатчине, Шушарах.\n"  </string>
+    <string name="slon">slon</string>
+    <string name="title_activity_scrolling_onas">О нас</string>
+    <string name="large_text">
+"Компания «Слоновоз» осуществляет грузоперевозки быстро, качественно, надежно.\n"
+        "Наши цены вас приятно удивят.\n" "Мы сотрудничаем с физическими и юридическими лицами.\n"
+        "Располагаем достойным парком автотранспорта и штатом квалифицированных и опытных сотрудников.\n"
+  </string>
+    <string name="onas2">"У нас  всегда можно  заказать следующие услуги:\n\n"
+"квартирный переезд;\n"
+"дачный переезд;\n"
+"офисный переезд;\n"
+"дальние перевозки;\n"
+"заказать грузчиков;\n"
+"вывоз мусора;\n"
+"перевозка пианино;\n"</string>
+    <string name="nazad">НАЗАД</string>
+    <string name="title_activity_rastenki">Цены</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="caligj">Количество\n часов</string>
+    <string name="sred">Средняя\n цена</string>
+    <string name="kolgruz">количество\n грузчиков</string>
+    <string name="podsjit">подсчитать</string>
+    <string name="Ostzaizv">Оставить заявку</string>
+    <string name="Yznaisvoi">УЗНАЙТЕ СВОЮ ЦЕНУ</string>
+    <string name="title_activity_galerei">Галерея</string>
+    <string name="title_activity_oformzakaz">Анкета</string>
+    <string name="zappunkt">Заполните все пункты</string>
+    <string name="kakmah">Какую машину</string>
+    <string name="kolgr">Количество грузчиков</string>
+    <string name="_0">0</string>
+    <string name="dopop">Дополнительно</string>
+    <string name="kortkor">картонные коробки</string>
+    <string name="politel">полиэтилен (предметы)</string>
+    <string name="bezlift">Без лифта</string>
+    <string name="razbmeb">Разбор мебели</string>
+    <string name="kmotdo">Км от загрузки до выгрузки*</string>
+    <string name="telf">Телефон</string>
+    <string name="adres">Телефон</string>
+    <string name="gorod">город</string>
+    <string name="ylits">улица</string>
+    <string name="dom">дом</string>
+    <string name="kvar">квартира</string>
+    <string name="etaj">Этаж</string>
+    <string name="komentz">Комментарий к заказу</string>
+    <string name="zena">Цена</string>
+    <string name="koljas">Количество часов*</string>
+    <string name="otprav">Отправить</string>
+    <string name="spravprim">* приблизительное количество, в большую сторону</string>
+    <string name="zvonsprav">Для получения более подробной информации звоните по телефону</string>
+</resources>

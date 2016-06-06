@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="bigi.slonovoz.Rastenki">
+    <item
+        android:id="@+id/actiongoogl"
+        android:orderInCategory="1"
+        android:title="@string/action_settings"
+        android:icon="@mipmap/icgooog"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/actionvk"
+        android:orderInCategory="1"
+        android:title="@string/action_settings"
+        android:icon="@mipmap/icvk"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/actionweb"
+        android:orderInCategory="1"
+        android:title="@string/action_settings"
+        android:icon="@mipmap/icweb"
+        app:showAsAction="always" />
+</menu>
