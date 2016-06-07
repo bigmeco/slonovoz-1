@@ -7,7 +7,6 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -23,9 +22,9 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public class Oformzakaz extends AppCompatActivity {
-private RadioGroup radioGroup;
-    private String maj, gruskol, mesto, adres1,adres2,adres3,adres4,adres5, dopkar,doppol,dopblivt,doprazb, tel, koment,time, skyp;
-    private int maj1=0, gruskol1=0, mesto1=0, dop1k=0,dop2p=0,dop3l=0, otvet=0,taim=0;
+    private RadioGroup radioGroup;
+    private String maj, numberOfMovers, place, addressCity, addressStreet, addressTo, addressHome, address, dopkar, doppol, dopblivt, doprazb, tel, koment, time, skyp;
+    private int maj1 = 0, gruskol1 = 0, mesto1 = 0, dop1k = 0, dop2p = 0, dop3l = 0, otvet = 0, taim = 0;
     private TextView textView;
     private EditText editText1A;
     private EditText editText2A;
@@ -43,13 +42,14 @@ private RadioGroup radioGroup;
     private CheckBox checkBox2;
     private ImageButton imageButton;
     private Button button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_oformzakaz);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,62 +62,62 @@ private RadioGroup radioGroup;
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        textView = (TextView)findViewById(R.id.textView23);
-        editText1A = (EditText)findViewById(R.id.editText5);
-        editText2A = (EditText)findViewById(R.id.editText6);
-        editText3A = (EditText)findViewById(R.id.editText7);
-        editText4A = (EditText)findViewById(R.id.editText8);
-        editText5A = (EditText)findViewById(R.id.editText9);
-        editText6D = (EditText)findViewById(R.id.editText12);
-        editText7D = (EditText)findViewById(R.id.editText13);
-        editText8KG = (EditText)findViewById(R.id.editText3);
-        editText9OTDO = (EditText)findViewById(R.id.editText11);
-        editText10T = (EditText)findViewById(R.id.editText4);
-        editText11J = (EditText)findViewById(R.id.editText14);
-        editText12KOM = (EditText)findViewById(R.id.editText10);
-        checkBox = (CheckBox)findViewById(R.id.checkBox2);
-        checkBox2 = (CheckBox)findViewById(R.id.checkBox3);
-        radioGroup = (RadioGroup)findViewById(R.id.radiob);
+        textView = (TextView) findViewById(R.id.textView23);
+        editText1A = (EditText) findViewById(R.id.editText5);
+        editText2A = (EditText) findViewById(R.id.editText6);
+        editText3A = (EditText) findViewById(R.id.editText7);
+        editText4A = (EditText) findViewById(R.id.editText8);
+        editText5A = (EditText) findViewById(R.id.editText9);
+        editText6D = (EditText) findViewById(R.id.editText12);
+        editText7D = (EditText) findViewById(R.id.editText13);
+        editText8KG = (EditText) findViewById(R.id.editText3);
+        editText9OTDO = (EditText) findViewById(R.id.editText11);
+        editText10T = (EditText) findViewById(R.id.editText4);
+        editText11J = (EditText) findViewById(R.id.editText14);
+        editText12KOM = (EditText) findViewById(R.id.editText10);
+        checkBox = (CheckBox) findViewById(R.id.checkBox2);
+        checkBox2 = (CheckBox) findViewById(R.id.checkBox3);
+        radioGroup = (RadioGroup) findViewById(R.id.radiob);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
-                switch (checkedId){
+                switch (checkedId) {
                     case R.id.radioButton:
-                        maj=" Газель 3м ";
-                        maj1=490;
+                        maj = " Газель 3м ";
+                        maj1 = 490;
                         break;
                     case R.id.radioButton2:
-                        maj=" Газель 4м ";
-                        maj1=590;
+                        maj = " Газель 4м ";
+                        maj1 = 590;
                         break;
                 }
             }
         });
-        dopblivt=" с ливтом ";
+        dopblivt = " с ливтом ";
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (checkBox.isChecked()){
-                    dopblivt=" без лифта ";
-                    dop3l=100;
+                if (checkBox.isChecked()) {
+                    dopblivt = " без лифта ";
+                    dop3l = 100;
                 } else {
-                    dopblivt=" с ливтом ";
-                    dop3l=0;
+                    dopblivt = " с ливтом ";
+                    dop3l = 0;
                 }
             }
         });
-        doprazb=" без разбора мебели ";
+        doprazb = " без разбора мебели ";
         checkBox2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (checkBox2.isChecked()){
-                    doprazb=" разбор мебели ";
+                if (checkBox2.isChecked()) {
+                    doprazb = " разбор мебели ";
                 } else {
-                    doprazb=" без разбора мебели ";
+                    doprazb = " без разбора мебели ";
                 }
             }
         });
-        imageButton = (ImageButton)findViewById(R.id.imageButton);
+        imageButton = (ImageButton) findViewById(R.id.imageButton);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -136,48 +136,54 @@ private RadioGroup radioGroup;
                     mesto1 = 0;
                     taim = 0;
                 }
-                int km=0;
-                if (mesto1<=200){
-                    km=30;
-                } if (mesto1>=201 && mesto1<=500){
-                    km=27;
-                }if (mesto1>=501){
-                    km=25;
+                int km = 0;
+                if (mesto1 <= 200) {
+                    km = 30;
+                }
+                if (mesto1 >= 201 && mesto1 <= 500) {
+                    km = 27;
+                }
+                if (mesto1 >= 501) {
+                    km = 25;
                 }
                 int n1 = dop3l * taim;
-               int n31 = gruskol1*400;
-                int n32 = n31*taim;
-                int n2 = maj1 *taim;
-                int b1 = mesto1*km;
-                int b2 = dop1k*40;
-                int b3 = dop2p*250;
-                otvet = n1+n2+n32+b1+b2+b3;
-                textView.setText(""+otvet);
-                 gruskol1=0; mesto1=0;  dop1k=0;dop2p=0; taim=0;
+                int n31 = gruskol1 * 400;
+                int n32 = n31 * taim;
+                int n2 = maj1 * taim;
+                int b1 = mesto1 * km;
+                int b2 = dop1k * 40;
+                int b3 = dop2p * 250;
+                otvet = n1 + n2 + n32 + b1 + b2 + b3;
+                textView.setText("" + otvet);
+                gruskol1 = 0;
+                mesto1 = 0;
+                dop1k = 0;
+                dop2p = 0;
+                taim = 0;
 
             }
         });
-        button = (Button)findViewById(R.id.button);
+        button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gruskol = editText8KG.getText().toString();
-                mesto = editText9OTDO.getText().toString();
-                adres1 = editText1A.getText().toString();
-                adres2 = editText2A.getText().toString();
-                adres3 = editText3A.getText().toString();
-                adres4 = editText4A.getText().toString();
-                adres5 = editText5A.getText().toString();
+                numberOfMovers = editText8KG.getText().toString();
+                place = editText9OTDO.getText().toString();
+                addressCity = editText1A.getText().toString();
+                addressStreet = editText2A.getText().toString();
+                addressTo = editText3A.getText().toString();
+                addressHome = editText4A.getText().toString();
+                address = editText5A.getText().toString();
                 dopkar = editText6D.getText().toString();
                 doppol = editText7D.getText().toString();
                 tel = editText10T.getText().toString();
                 time = editText11J.getText().toString();
                 koment = editText12KOM.getText().toString();
-                skyp ="машина-("+maj+") "+"количество грузчиков-("+gruskol+") "+
-                        "дальность поездки-("+mesto+"км) "+ "город-("+adres1+") "+"улица-("+adres2+") "+"дом-("+adres3+") "
-                        +"квартира-("+adres4+") "+"этаж-("+adres5+") "+"лифт-("+dopblivt+") "+"разбор-("+doprazb+") "+
-                        "количество коробок-("+dopkar+") "+"упаковок мебели-("+doppol+") "+
-                        "телефон-("+tel+") "+ "коментарий-("+koment+") "+"примерное время-("+time+") "+" цена("+otvet+").";
+                skyp = "машина-(" + maj + ") " + "количество грузчиков-(" + numberOfMovers + ") " +
+                        "дальность поездки-(" + place + "км) " + "город-(" + addressCity + ") " + "улица-(" + addressStreet + ") " + "дом-(" + addressTo + ") "
+                        + "квартира-(" + addressHome + ") " + "этаж-(" + address + ") " + "лифт-(" + dopblivt + ") " + "разбор-(" + doprazb + ") " +
+                        "количество коробок-(" + dopkar + ") " + "упаковок мебели-(" + doppol + ") " +
+                        "телефон-(" + tel + ") " + "коментарий-(" + koment + ") " + "примерное время-(" + time + ") " + " цена(" + otvet + ").";
                 Intent email = new Intent(Intent.ACTION_SEND);
 //Указываем получателя
                 email.putExtra(Intent.EXTRA_EMAIL, new String[]{"abmin@slonovoz.com"});
@@ -192,12 +198,14 @@ private RadioGroup radioGroup;
             }
         });
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -209,10 +217,10 @@ private RadioGroup radioGroup;
         if (id == R.id.actiongoogl) {
             Intent browseIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=bigmeco"));
             startActivity(browseIntent);
-        }   else if (id == R.id.actionvk) {
+        } else if (id == R.id.actionvk) {
             Intent browseIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://vk.com/slono_voz"));
             startActivity(browseIntent);
-        }  else if (id == R.id.actionweb) {
+        } else if (id == R.id.actionweb) {
             Intent browseIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.slonovoz.com/"));
             startActivity(browseIntent);
         }

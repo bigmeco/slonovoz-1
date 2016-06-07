@@ -10,22 +10,23 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
-ImageButton imageButton;
+    ImageButton imageButton;
     Button button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,7 +50,7 @@ ImageButton imageButton;
     @Override
     protected void onStart() {
         super.onStart();
-        imageButton = (ImageButton)findViewById(R.id.imageButtonbuttononas);
+        imageButton = (ImageButton) findViewById(R.id.imageButtonbuttononas);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,7 +59,7 @@ ImageButton imageButton;
                 startActivity(intent);
             }
         });
-        button = (Button)findViewById(R.id.buttoninfo);
+        button = (Button) findViewById(R.id.buttoninfo);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,7 +68,7 @@ ImageButton imageButton;
                 startActivity(intent);
             }
         });
-        imageButton = (ImageButton)findViewById(R.id.imageButtonbuttonmani);
+        imageButton = (ImageButton) findViewById(R.id.imageButtonbuttonmani);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,7 +77,7 @@ ImageButton imageButton;
                 startActivity(intent);
             }
         });
-        button = (Button)findViewById(R.id.buttonmani);
+        button = (Button) findViewById(R.id.buttonmani);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,7 +86,7 @@ ImageButton imageButton;
                 startActivity(intent);
             }
         });
-        imageButton = (ImageButton)findViewById(R.id.imageButtonbuttongaler);
+        imageButton = (ImageButton) findViewById(R.id.imageButtonbuttongaler);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,7 +95,7 @@ ImageButton imageButton;
                 startActivity(intent);
             }
         });
-        button = (Button)findViewById(R.id.buttongaler);
+        button = (Button) findViewById(R.id.buttongaler);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -103,7 +104,7 @@ ImageButton imageButton;
                 startActivity(intent);
             }
         });
-        imageButton = (ImageButton)findViewById(R.id.imageButtonbuttonotziv);
+        imageButton = (ImageButton) findViewById(R.id.imageButtonbuttonotziv);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,7 +113,7 @@ ImageButton imageButton;
                 startActivity(intent);
             }
         });
-        button = (Button)findViewById(R.id.buttonotziv);
+        button = (Button) findViewById(R.id.buttonotziv);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -125,19 +126,17 @@ ImageButton imageButton;
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.actiongoogl) {
             Intent browseIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=bigmeco"));
             startActivity(browseIntent);
-        }   else if (id == R.id.actionvk) {
+        } else if (id == R.id.actionvk) {
             Intent browseIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://vk.com/slono_voz"));
             startActivity(browseIntent);
-        }  else if (id == R.id.actionweb) {
+        } else if (id == R.id.actionweb) {
             Intent browseIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.slonovoz.com/"));
             startActivity(browseIntent);
         }
