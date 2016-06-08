@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent;
-                intent = new Intent(MainActivity.this, Oformzakaz.class);
+                intent = new Intent(MainActivity.this, OrderRegistration.class);
                 startActivity(intent);
             }
         });
@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent;
-                intent = new Intent(MainActivity.this, Oformzakaz.class);
+                intent = new Intent(MainActivity.this, OrderRegistration.class);
                 startActivity(intent);
             }
         });

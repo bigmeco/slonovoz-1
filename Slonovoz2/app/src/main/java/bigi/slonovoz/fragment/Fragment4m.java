@@ -17,7 +17,6 @@ import bigi.slonovoz.R;
 public class Fragment4m extends Fragment {
     private Button button;
     private int a, b, c;
-    // TODO: Rename and change types and number of parameters
     public static Fragment4m newInstance() {
         Fragment4m fragment = new Fragment4m();
 

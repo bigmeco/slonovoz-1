@@ -6,7 +6,6 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -22,23 +21,24 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ViewSwitcher;
 
-public class Galerei extends AppCompatActivity implements ViewSwitcher.ViewFactory, GestureDetector.OnGestureListener{
+public class Galerei extends AppCompatActivity implements ViewSwitcher.ViewFactory, GestureDetector.OnGestureListener {
     private ImageSwitcher mImageSwitcher;
     int position = 0;
-    private int[] mImageIds = { R.drawable.p1, R.drawable.p2,
+    private int[] mImageIds = {R.drawable.p1, R.drawable.p2,
             R.drawable.p3, R.drawable.p4, R.drawable.p5,
-            R.drawable.p6, R.drawable.p7, };
+            R.drawable.p6, R.drawable.p7,};
     private GestureDetector mGestureDetector;
     private static final int SWIPE_MIN_DISTANCE = 120;
     private static final int SWIPE_MAX_OFF_PATH = 250;
     private static final int SWIPE_THRESHOLD_VELOCITY = 100;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_galerei);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        mImageSwitcher = (ImageSwitcher)findViewById(R.id.imageSwitcher);
+        mImageSwitcher = (ImageSwitcher) findViewById(R.id.imageSwitcher);
         mImageSwitcher.setFactory(this);
 
         Animation inAnimation = new AlphaAnimation(0, 1);
@@ -64,12 +64,14 @@ public class Galerei extends AppCompatActivity implements ViewSwitcher.ViewFacto
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
     public void setPositionNext() {
         position++;
         if (position > mImageIds.length - 1) {
@@ -147,9 +149,11 @@ public class Galerei extends AppCompatActivity implements ViewSwitcher.ViewFacto
         }
         return true;
     }
-    public void onSwitcherClick(View view){
+
+    public void onSwitcherClick(View view) {
         mImageSwitcher.showNext();
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -161,10 +165,10 @@ public class Galerei extends AppCompatActivity implements ViewSwitcher.ViewFacto
         if (id == R.id.actiongoogl) {
             Intent browseIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=bigmeco"));
             startActivity(browseIntent);
-        }   else if (id == R.id.actionvk) {
+        } else if (id == R.id.actionvk) {
             Intent browseIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://vk.com/slono_voz"));
             startActivity(browseIntent);
-        }  else if (id == R.id.actionweb) {
+        } else if (id == R.id.actionweb) {
             Intent browseIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.slonovoz.com/"));
             startActivity(browseIntent);
         }

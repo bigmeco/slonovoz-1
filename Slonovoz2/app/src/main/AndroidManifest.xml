@@ -48,7 +48,7 @@
                 android:value="bigi.slonovoz.MainActivity" />
         </activity>
         <activity
-            android:name=".Oformzakaz"
+            android:name=".OrderRegistration"
             android:label="@string/title_activity_oformzakaz"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">

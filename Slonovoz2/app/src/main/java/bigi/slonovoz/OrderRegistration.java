@@ -21,10 +21,10 @@ import android.widget.ImageButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-public class Oformzakaz extends AppCompatActivity {
+public class OrderRegistration extends AppCompatActivity {
     private RadioGroup radioGroup;
-    private String maj, numberOfMovers, place, addressCity, addressStreet, addressTo, addressHome, address, dopkar, doppol, dopblivt, doprazb, tel, koment, time, skyp;
-    private int maj1 = 0, gruskol1 = 0, mesto1 = 0, dop1k = 0, dop2p = 0, dop3l = 0, otvet = 0, taim = 0;
+    private String maj, numberOfMovers, place, addressCity, addressStreet, addressTo, addressHome, address, additionalBoxes, additionalPolythene, additionalLivt, additionalUnloading, tel, comment, time, skyp;
+    private int maj1 = 0, gruskol1 = 0, position = 0, dop1k = 0, dop2p = 0, dop3l = 0, otvet = 0, taim = 0;
     private TextView textView;
     private EditText editText1A;
     private EditText editText2A;
@@ -55,7 +55,7 @@ public class Oformzakaz extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent dialIntent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "989-89-67"));
-                if (ActivityCompat.checkSelfPermission(Oformzakaz.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                if (ActivityCompat.checkSelfPermission(OrderRegistration.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     return;
                 }
                 startActivity(dialIntent);
@@ -93,27 +93,27 @@ public class Oformzakaz extends AppCompatActivity {
                 }
             }
         });
-        dopblivt = " с ливтом ";
+        additionalLivt = " с ливтом ";
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (checkBox.isChecked()) {
-                    dopblivt = " без лифта ";
+                    additionalLivt = " без лифта ";
                     dop3l = 100;
                 } else {
-                    dopblivt = " с ливтом ";
+                    additionalLivt = " с ливтом ";
                     dop3l = 0;
                 }
             }
         });
-        doprazb = " без разбора мебели ";
+        additionalUnloading = " без разбора мебели ";
         checkBox2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (checkBox2.isChecked()) {
-                    doprazb = " разбор мебели ";
+                    additionalUnloading = " разбор мебели ";
                 } else {
-                    doprazb = " без разбора мебели ";
+                    additionalUnloading = " без разбора мебели ";
                 }
             }
         });
@@ -126,37 +126,37 @@ public class Oformzakaz extends AppCompatActivity {
                     dop1k = Integer.parseInt(editText6D.getText().toString());
                     dop2p = Integer.parseInt(editText7D.getText().toString());
                     gruskol1 = Integer.parseInt(editText8KG.getText().toString());
-                    mesto1 = Integer.parseInt(editText9OTDO.getText().toString());
+                    position = Integer.parseInt(editText9OTDO.getText().toString());
                     taim = Integer.parseInt(editText11J.getText().toString());
 
                 } catch (NumberFormatException e) {
                     dop1k = 0;
                     dop2p = 0;
                     gruskol1 = 0;
-                    mesto1 = 0;
+                    position = 0;
                     taim = 0;
                 }
                 int km = 0;
-                if (mesto1 <= 200) {
+                if (position <= 200) {
                     km = 30;
                 }
-                if (mesto1 >= 201 && mesto1 <= 500) {
+                if (position >= 201 && position <= 500) {
                     km = 27;
                 }
-                if (mesto1 >= 501) {
+                if (position >= 501) {
                     km = 25;
                 }
                 int n1 = dop3l * taim;
                 int n31 = gruskol1 * 400;
                 int n32 = n31 * taim;
                 int n2 = maj1 * taim;
-                int b1 = mesto1 * km;
+                int b1 = position * km;
                 int b2 = dop1k * 40;
                 int b3 = dop2p * 250;
                 otvet = n1 + n2 + n32 + b1 + b2 + b3;
                 textView.setText("" + otvet);
                 gruskol1 = 0;
-                mesto1 = 0;
+                position = 0;
                 dop1k = 0;
                 dop2p = 0;
                 taim = 0;
@@ -174,16 +174,16 @@ public class Oformzakaz extends AppCompatActivity {
                 addressTo = editText3A.getText().toString();
                 addressHome = editText4A.getText().toString();
                 address = editText5A.getText().toString();
-                dopkar = editText6D.getText().toString();
-                doppol = editText7D.getText().toString();
+                additionalBoxes = editText6D.getText().toString();
+                additionalPolythene = editText7D.getText().toString();
                 tel = editText10T.getText().toString();
                 time = editText11J.getText().toString();
-                koment = editText12KOM.getText().toString();
+                comment = editText12KOM.getText().toString();
                 skyp = "машина-(" + maj + ") " + "количество грузчиков-(" + numberOfMovers + ") " +
                         "дальность поездки-(" + place + "км) " + "город-(" + addressCity + ") " + "улица-(" + addressStreet + ") " + "дом-(" + addressTo + ") "
-                        + "квартира-(" + addressHome + ") " + "этаж-(" + address + ") " + "лифт-(" + dopblivt + ") " + "разбор-(" + doprazb + ") " +
-                        "количество коробок-(" + dopkar + ") " + "упаковок мебели-(" + doppol + ") " +
-                        "телефон-(" + tel + ") " + "коментарий-(" + koment + ") " + "примерное время-(" + time + ") " + " цена(" + otvet + ").";
+                        + "квартира-(" + addressHome + ") " + "этаж-(" + address + ") " + "лифт-(" + additionalLivt + ") " + "разбор-(" + additionalUnloading + ") " +
+                        "количество коробок-(" + additionalBoxes + ") " + "упаковок мебели-(" + additionalPolythene + ") " +
+                        "телефон-(" + tel + ") " + "коментарий-(" + comment + ") " + "примерное время-(" + time + ") " + " цена(" + otvet + ").";
                 Intent email = new Intent(Intent.ACTION_SEND);
 //Указываем получателя
                 email.putExtra(Intent.EXTRA_EMAIL, new String[]{"abmin@slonovoz.com"});
