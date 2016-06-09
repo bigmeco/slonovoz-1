@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import bigi.slonovoz.R;
@@ -15,8 +14,7 @@ import bigi.slonovoz.R;
 
 public class Fragment3m extends Fragment {
     private Button button;
-    private int a, b, c;
-    // TODO: Rename and change types and number of parameters
+    private int time, loaders, decision;
     public static Fragment3m newInstance() {
         Fragment3m fragment = new Fragment3m();
 
@@ -48,18 +46,18 @@ public class Fragment3m extends Fragment {
                 EditText editText2 = (EditText) getActivity().findViewById(R.id.editText24m);
                 TextView textView = (TextView) getActivity().findViewById(R.id.textView54m);
                 try {
-                    a = Integer.parseInt(editText1.getText().toString());
-                    b = Integer.parseInt(editText2.getText().toString());
+                    time = Integer.parseInt(editText1.getText().toString());
+                    loaders = Integer.parseInt(editText2.getText().toString());
 
                 } catch (NumberFormatException e) {
-                    a = 0;
-                    b = 0;
+                    time = 0;
+                    loaders = 0;
                 }
-                c = a * 490;
-                b = (a*b)*400;
-                c = c+b;
+                decision = time * 490;
+                loaders = (time * loaders)*400;
+                decision = decision + loaders;
 
-                textView.setText(""+c);
+                textView.setText(""+ decision);
             }
         });
     }

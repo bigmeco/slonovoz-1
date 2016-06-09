@@ -39,7 +39,7 @@
                 android:value="bigi.slonovoz.MainActivity" />
         </activity>
         <activity
-            android:name=".Galerei"
+            android:name=".Gallery"
             android:label="@string/title_activity_galerei"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">

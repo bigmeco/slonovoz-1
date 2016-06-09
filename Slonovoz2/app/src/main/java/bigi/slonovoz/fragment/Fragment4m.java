@@ -1,7 +1,5 @@
 package bigi.slonovoz.fragment;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -16,7 +14,8 @@ import bigi.slonovoz.R;
 
 public class Fragment4m extends Fragment {
     private Button button;
-    private int a, b, c;
+    private int time, loaders, decision;
+
     public static Fragment4m newInstance() {
         Fragment4m fragment = new Fragment4m();
 
@@ -40,7 +39,7 @@ public class Fragment4m extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        button = (Button)getActivity().findViewById(R.id.button3);
+        button = (Button) getActivity().findViewById(R.id.button3);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,18 +47,18 @@ public class Fragment4m extends Fragment {
                 EditText editText2 = (EditText) getActivity().findViewById(R.id.editText2);
                 TextView textView = (TextView) getActivity().findViewById(R.id.textView5);
                 try {
-                    a = Integer.parseInt(editText1.getText().toString());
-                    b = Integer.parseInt(editText2.getText().toString());
+                    time = Integer.parseInt(editText1.getText().toString());
+                    loaders = Integer.parseInt(editText2.getText().toString());
 
                 } catch (NumberFormatException e) {
-                    a = 0;
-                    b = 0;
+                    time = 0;
+                    loaders = 0;
                 }
-                c = a * 590;
-                b = (a*b)*400;
-                c = c+b;
+                decision = time * 590;
+                loaders = (time * loaders) * 400;
+                decision = decision + loaders;
 
-                textView.setText(""+c);
+                textView.setText("" + decision);
             }
         });
     }

@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent;
-                intent = new Intent(MainActivity.this, Galerei.class);
+                intent = new Intent(MainActivity.this, Gallery.class);
                 startActivity(intent);
             }
         });
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent;
-                intent = new Intent(MainActivity.this, Galerei.class);
+                intent = new Intent(MainActivity.this, Gallery.class);
                 startActivity(intent);
             }
         });

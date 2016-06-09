@@ -21,7 +21,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ViewSwitcher;
 
-public class Galerei extends AppCompatActivity implements ViewSwitcher.ViewFactory, GestureDetector.OnGestureListener {
+public class Gallery extends AppCompatActivity implements ViewSwitcher.ViewFactory, GestureDetector.OnGestureListener {
     private ImageSwitcher mImageSwitcher;
     int position = 0;
     private int[] mImageIds = {R.drawable.p1, R.drawable.p2,
@@ -56,7 +56,7 @@ public class Galerei extends AppCompatActivity implements ViewSwitcher.ViewFacto
             @Override
             public void onClick(View view) {
                 Intent dialIntent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "989-89-67"));
-                if (ActivityCompat.checkSelfPermission(Galerei.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                if (ActivityCompat.checkSelfPermission(Gallery.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     return;
                 }
                 startActivity(dialIntent);
